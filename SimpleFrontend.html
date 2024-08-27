@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="background-color: rgb(126, 172, 162);">
+        <br><br>
+        <h2 style="text-align: center;">Lychee Company</h2>
+        <br><br>
+    </header>
+    <nav style="background-color: rgb(7, 7, 7); color: white; padding: 10px;">
+        <a href="#" style="text-decoration: none; color: white; margin-right: 20px;">Home</a>
+        <a href="#" style="text-decoration: none; color: white; margin-right: 20px;">About Us</a>
+        <a href="#" style="text-decoration: none; color: white; margin-right: 20px;">Our Offers</a>
+        <a href="#" style="text-decoration: none; color: white; margin-right: 20px;">Purchase</a>
+        <a href="#" style="text-decoration: none; color: white; margin-right: 20px;">Sell</a>
+        <a href="#" style="text-decoration: none; color: white;">Contact Us</a>
+    </nav>
+
+    <main id="login-form" style="text-align:center; margin-top: 40px;">
+        <div style="display: inline-block; padding: 20px; border: 2px solid #49378d; border-radius: 10px; background-color: #49378d; width: 250px; height:270px">
+            <h3 style="text-align:center; color:rgb(255, 255, 255)">Login</h3> 
+            <form>
+                <input type="email" placeholder="User Email" style="width: 240px;height: 30px;border-radius: 5px;border: 0px">
+                <br><br>
+                <input type="password" placeholder="Password" style="width: 240px;height: 30px;border-radius: 5px;border: 0px">
+            </form>
+            <h4 style="text-align:center; color:rgb(255, 255, 255)"><b>Don't have an account?</b></h4> 
+            <a href="#" onclick="showForm('register-form')" style="text-align:center; color:rgb(255, 255, 255)">Register</a>
+        </div>
+    </main>
+
+    <main id="register-form" class="hidden" style="text-align:center ; margin-top: 20px;">
+        <div style="display: inline-block; padding: 20px; border: 2px solid #49378d; border-radius: 10px; background-color: #49378d; width: 250px; height:320px">
+            <h3 style="text-align:center; color:rgb(255, 255, 255)">Register</h3> 
+            <form>
+                <input type="text" placeholder="Username" style="width: 240px;height: 30px;border-radius: 5px;border: 0px">
+                <br><br>
+                <input type="email" placeholder="Email" style="width: 240px;height: 30px;border-radius: 5px;border: 0px">
+                <br><br>
+                <input type="password" placeholder="Set Password" style="width: 240px;height: 30px;border-radius: 5px;border: 0px">
+                <br><br>
+                <input type="password" placeholder="Confirm Password" style="width: 240px;height: 30px;border-radius: 5px;border: 0px">
+            </form>
+            <h4 style="text-align:center; color:rgb(255, 255, 255)"><b>Already have an account?</b></h4> 
+            <a href="#" onclick="showForm('login-form')" style="text-align:center; color:rgb(255, 255, 255)">Log in</a>
+        </div>
+    </main>
+
+    <script>
+        function showForm(formId) {
+            document.getElementById('login-form').classList.add('hidden');
+            document.getElementById('register-form').classList.add('hidden');
+            document.getElementById(formId).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
